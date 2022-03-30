@@ -1,0 +1,3 @@
+This is a shell which has become a text editor now. 
+I am now appending this line to the previous lines.
+Single and multi line commands

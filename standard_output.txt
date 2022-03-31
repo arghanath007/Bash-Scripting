@@ -1,18 +1,16 @@
-total 52
-drwxrwxr-x  6 arghanath arghanath 4096 Mar 31 13:13 .
+total 48
+drwxrwxr-x  6 arghanath arghanath 4096 Mar 31 13:12 .
 drwxr-xr-x 35 arghanath arghanath 4096 Mar 31 09:41 ..
 -rw-rw-r--  1 arghanath arghanath    0 Mar 31 10:53 10
 -rw-rw-r--  1 arghanath arghanath 3844 Mar 30 18:04 Bash_commands.md
 -rw-rw-r--  1 arghanath arghanath  136 Mar 30 18:47 file.txt
 drwxrwxr-x  8 arghanath arghanath 4096 Mar 30 19:06 .git
--rwxrwxr-x  1 arghanath arghanath 2183 Mar 31 13:19 helloscript.sh
--rw-rw-r--  1 arghanath arghanath    0 Mar 31 13:19 output.txt
+-rwxrwxr-x  1 arghanath arghanath 2152 Mar 31 13:13 helloscript.sh
+-rw-rw-r--  1 arghanath arghanath   12 Mar 30 18:42 output.txt
 drwxrwxr-x  2 arghanath arghanath 4096 Mar 31 13:11 Photos
 drwxrwxr-x  3 arghanath arghanath 4096 Mar 31 13:08 .pytest_cache
--rw-rw-r--  1 arghanath arghanath 3767 Mar 31 13:15 Scripts.md
--rw-rw-r--  1 arghanath arghanath   50 Mar 31 13:13 standard_error_1.txt
+-rw-rw-r--  1 arghanath arghanath 3328 Mar 31 13:10 Scripts.md
 -rw-rw-r--  1 arghanath arghanath    0 Mar 31 13:13 standard_error.txt
--rw-rw-r--  1 arghanath arghanath    0 Mar 31 13:13 standard_output_1.txt
--rw-rw-r--  1 arghanath arghanath  955 Mar 31 13:13 standard_output.txt
+-rw-rw-r--  1 arghanath arghanath    0 Mar 31 13:13 standard_output.txt
 -rw-rw-r--  1 arghanath arghanath    3 Mar 31 11:08 tempCodeRunnerFile.sh
 drwxrwxr-x  2 arghanath arghanath 4096 Mar 30 09:42 .vscode

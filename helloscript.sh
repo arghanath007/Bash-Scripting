@@ -146,3 +146,89 @@ number=1
 # ls +al >& output1.txt
 
 
+
+# echo "Enter 1st String"
+# read str1
+
+# echo "Enter 2nd String"
+# read str2
+
+# if [ "$str1" == "$str2" ]
+# then 
+#     echo "Matching Strings"
+
+# else 
+#     echo "Not Matching Strings"
+# fi
+
+
+# echo "Enter 1st Number"
+# read num1
+
+# echo "Enter 2nd Number"
+# read num2
+
+# if [ $num1 == $num2 ]
+# then 
+#     echo "Matching Strings"
+
+# else 
+#     echo "Not Matching Strings"
+# fi
+
+
+# echo "Enter 1st String"
+# read str1
+
+# echo "Enter 2nd String"
+# read str2
+
+# if [ $str1 \< $str2 ]
+# then 
+#     echo "$str1 is smaller than $str2"
+
+# elif [ $str1 \> $str2 ]
+# then
+#     echo "$str1 is greater than $str2"
+
+# else
+#     echo "$str1 is equal to $str2"
+
+# fi
+
+
+# echo "Enter 1st String"
+# read str1
+
+# echo "Enter 2nd String"
+# read str2
+
+# concat=$str1" "$str2
+
+# echo $concat
+
+
+
+# echo "Enter 1st String"
+# read foo
+
+echo "Enter 1st String"
+read str1
+
+# echo "Enter 2nd String"
+# read str2
+
+echo ${str1^}
+echo ${str1^^}
+
+# foo="$(tr '[:lower:]' '[:upper:]' <<< ${foo:0:1})${foo:1}"
+
+# echo ${foo,}
+# echo ${foo,,}
+
+# echo ${str2^}
+# echo ${str2^^}
+
+
+
+

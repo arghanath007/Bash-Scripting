@@ -1,4 +1,4 @@
-Source Link -> https://www.youtube.com/watch?v=e7BufAVwDiM(1hr 5mins into the video )
+Source Link -> https://www.youtube.com/watch?v=e7BufAVwDiM(1hr 14mins into the video )
 
 **"\*" or just asterisks in Bash means a wildcard that stands for any string of any size.**
 
@@ -195,3 +195,68 @@ export MESSAGE
 ### inportScript.sh
 
 echo "The imported message is: $MESSAGE"
+
+## Equals to(==)
+
+    echo "Enter 1st String"
+    read str1
+
+    echo "Enter 2nd String"
+    read str2
+
+    if [ "$str1" == "$str2" ]
+    then
+        echo "Matching Strings"
+
+    else
+        echo "Not Matching Strings"
+    fi
+
+## Greater than(\>) and Less than(\<)
+
+    echo "Enter 1st String"
+    read str1
+
+    echo "Enter 2nd String"
+    read str2
+
+    if [ $str1 \< $str2 ]
+    then
+        echo "$str1 is smaller than $str2"
+
+    elif [ $str1 \> $str2 ]
+    then
+        echo "$str1 is greater than $str2"
+
+    else
+        echo "$str1 is equal to $str2"
+
+    fi
+
+## Concatenation
+
+    echo "Enter 1st String"
+    read str1
+
+    echo "Enter 2nd String"
+    read str2
+
+    echo "$str1 $str2"
+
+## Upper and Lower Case
+
+### Output -> 'aRGHA', it converts the first letter of the string to lower case.
+
+echo ${foo,}
+
+### Output -> 'argha', it converts the whole string to lower case.
+
+echo ${foo,,}
+
+### Output -> 'Argha', it converts the first letter of the string to upper case.
+
+echo ${str1^}
+
+### Output -> 'ARGHA', it converts the whole string to upper case.
+
+echo ${str1^^}

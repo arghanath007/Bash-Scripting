@@ -1,4 +1,4 @@
-Source Link -> https://www.youtube.com/watch?v=e7BufAVwDiM(1hr 14mins into the video )
+Source Link -> https://www.youtube.com/watch?v=e7BufAVwDiM(1hr 54mins into the video )
 
 **"\*" or just asterisks in Bash means a wildcard that stands for any string of any size.**
 
@@ -260,3 +260,147 @@ echo ${str1^}
 ### Output -> 'ARGHA', it converts the whole string to upper case.
 
 echo ${str1^^}
+
+## Numbers and Arithmetic
+
+echo $(( n1 + n2 ))
+echo $(( n1 - n2 ))
+echo $(( n1 / n2 ))
+echo $(( n2 / n1 ))
+echo $(( n1 % n2 ))
+echo $(( n2 % n1 ))
+echo $(( n1 \* n2 )) #multiplication
+
+### Alternative Way
+
+echo $(expr $n1 + $n2 )
+echo $(expr $n1 % $n2 )
+echo $(expr $n1 \* $n2 ) # expr doesn't recognize the multiplication operator or the Asterisk.
+
+## Converting Hex number to decimal number
+
+echo "Enter Hex Number of choice"
+read Hex
+
+echo -n "The decimal value of $Hex is: "
+
+echo "obase=10; ibase=16; $Hex" | bc
+
+> 'obase' -> Output Base.
+> 'ibase' -> Input Base.
+> 'bc' -> Bash Calculator. We are using that here to convert.
+
+## 'Declare' command
+
+> Bash is not a strongly typed language.
+
+### creating read only file
+
+declare -r pwd=./password
+
+echo $pwd
+
+pwd=./changed_password.txt
+
+echo $pwd
+
+### Searching
+
+declare -p myvariable -> 'myvariable' is the name of the variable to be searched.
+
+## Arrays
+
+### Declaring
+
+car=("AUDI" "BMW" "ASTON MARTIN" "TATA")
+
+echo "${car[@]}"
+
+> '@' prints out the whole array.
+
+### Printing
+
+echo "${car[0]}"  "${car[2]}"
+
+> Using indices to print out the elements of the array.
+
+echo "${!car[@]}"
+
+> This is printing out the indices of the array.
+
+echo "${#car[@]}"
+
+> Counts the values within the array.
+
+## Function
+
+    function printing()
+    {
+        echo $1 "$2 from the function $3 printing the $4 "
+    }
+
+    printing Hi, Calling and value
+
+
+
+    function printing()
+    {
+        value='Within the function'
+    }
+
+    value='Outside the function'
+    echo $value
+
+    printing
+    echo $value
+
+## Files and Directory
+
+    echo "Enter the directory to be checked: "
+    read dic
+
+    if [ -d $dic ]
+    then
+        echo "$dic exists"
+    else
+        mkdir $dic
+        echo "$dic created"
+    fi
+
+> '-d' -> Checks if the directory name exists or not. Checking a directory exists if it doesn't exist then it will create it otherwise it will say that the directory exists.
+
+### Checking and creating files
+
+    echo "Enter the file name to check "
+    read filename
+
+    if [ -f $filename ]
+    then
+        echo "$filename exists"
+
+    else
+        touch $filename
+        echo "$filename created"
+    fi
+
+> '-f' -> Checks if the filename exists or not. Checking a filename exists, if it doesn't exist then it will create it otherwise it will say that the filename exists.
+
+### Appending to files
+
+    echo "Enter the file name where to append the content: "
+    read filename
+
+    echo "Enter the content to append : "
+    read content
+
+    if [ -f $filename ]
+    then
+        echo "$content" >> $filename
+
+    else
+        touch $filename
+        echo "$content" >> $filename
+        echo "$filename created and the content was appended to $filename"
+    fi
+
+> '>>' -> Appends the content to the file. '>' -> Overwrites the content of the file.

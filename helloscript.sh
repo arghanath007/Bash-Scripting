@@ -212,14 +212,14 @@ number=1
 # echo "Enter 1st String"
 # read foo
 
-echo "Enter 1st String"
-read str1
+# echo "Enter 1st String"
+# read str1
 
 # echo "Enter 2nd String"
 # read str2
 
-echo ${str1^}
-echo ${str1^^}
+# echo ${str1^}
+# echo ${str1^^}
 
 # foo="$(tr '[:lower:]' '[:upper:]' <<< ${foo:0:1})${foo:1}"
 
@@ -228,6 +228,128 @@ echo ${str1^^}
 
 # echo ${str2^}
 # echo ${str2^^}
+
+
+# echo 21+31
+
+n1=20
+n2=30
+
+# echo $(( n1 + n2 ))
+# echo $(( n1 - n2 ))
+# echo $(( n1 / n2 ))
+# echo $(( n2 / n1 ))
+# echo $(( n1 % n2 ))
+# echo $(( n2 % n1 ))
+# echo $(( n1 * n2 ))
+
+
+# echo $(expr $n1 + $n2 )
+# echo $(expr $n1 % $n2 )
+# echo $(expr $n1 \* $n2 )
+
+
+# echo "Enter Hex Number of choice"
+# read Hex
+
+# echo -n "The decimal value of $Hex is: "
+
+# echo "obase=10; ibase=16; $Hex" | bc
+
+
+# declare -r pwd=./password
+
+# echo $pwd
+
+# pwd=./changed_password.txt
+
+# echo $pwd
+
+
+# car=("AUDI" "BUGATI" "BMW" "ASTON MARTIN" "TATA")
+
+# echo "${car[@]}"
+
+# echo "${car[0]}"  "${car[2]}"
+
+# echo "${!car[@]}"
+
+# echo "${#car[@]}" 
+
+
+# function printing()
+# {
+#     echo $1 "$2 from the function $3 printing the $4 "
+# }
+
+# printing Hi, Calling and value
+
+
+
+# function printing()
+# {
+#     value='Within the function'
+# }
+
+# value='Outside the function'
+# echo $value
+
+# printing
+# echo $value
+
+
+
+# echo "Enter the directory to be checked: "
+# read dic
+
+# if [ -d $dic ]
+# then
+#     echo "$dic exists"
+# else
+#     mkdir $dic
+#     echo "$dic created"
+# fi
+
+
+# echo "Enter the file name to check "
+# read filename
+
+# if [ -f $filename ]
+# then 
+#     echo "$filename exists"
+
+# else
+#     touch $filename
+#     echo "$filename created"
+# fi
+
+
+echo "Enter the file name where to append the content: "
+read filename
+
+echo "Enter the content to append : "
+read content
+
+if [ -f $filename ]
+then 
+    echo "$content" >> $filename  
+
+else
+    touch $filename
+    echo "$content" >> $filename 
+    echo "$filename created and the content was appended to $filename"
+fi
+
+
+
+
+
+
+
+
+
+
+
 
 
 

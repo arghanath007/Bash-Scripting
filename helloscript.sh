@@ -324,20 +324,60 @@ n2=30
 # fi
 
 
-echo "Enter the file name where to append the content: "
-read filename
+# echo "Enter the file name where to append the content: "
+# read filename
 
-echo "Enter the content to append : "
-read content
+# echo "Enter the content to append : "
+# read content
 
-if [ -f $filename ]
+# if [ -f $filename ]
+# then 
+#     echo "$content" >> $filename  
+
+# else
+#     touch $filename
+#     echo "$content" >> $filename 
+#     echo "$filename created and the content was appended to $filename"
+# fi
+
+
+# echo "Enter the file name to read the content: "
+# read filename
+
+# if [ -f $filename ]
+# then 
+#     while IFS="" read -r line
+#     do
+#         echo $line
+#     done < $filename
+
+# else
+#     echo "$filename does not exist"
+# fi
+
+
+# echo "Enter the file name to be deleted: "
+# read filename
+
+# if [ -f $filename ]
+# then 
+#     rm $filename
+#     echo "$filename was successfully deleted"
+# else
+#     echo "$filename does not exist"
+# fi
+
+
+
+echo "Enter the directory to be deleted: "
+read dir
+
+if [ -d $dir ]
 then 
-    echo "$content" >> $filename  
-
+    rmdir $dir
+    echo "$dir was successfully deleted"
 else
-    touch $filename
-    echo "$content" >> $filename 
-    echo "$filename created and the content was appended to $filename"
+    echo "$dir does not exist"
 fi
 
 

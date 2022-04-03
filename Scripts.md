@@ -404,3 +404,54 @@ echo "${#car[@]}"
     fi
 
 > '>>' -> Appends the content to the file. '>' -> Overwrites the content of the file.
+
+## Reading from a file
+
+    echo "Enter the file name where to append the content: "
+    read filename
+
+    if [ -f $filename ]
+    then
+        while IFS="" read -r line
+        do
+            echo $line
+        done < $filename
+
+    else
+        echo "$filename does not exist"
+    fi
+
+> 'IFS' -> Internal Field Separator.
+> 'read' -> Reads the content of the file.
+> '-r' is the read flag.
+> **'<' -> Reads the content of the file.**
+
+## Deleting a file
+
+    echo "Enter the file name to be deleted: "
+    read filename
+
+    if [ -f $filename ]
+    then
+        rm $filename
+        echo "$filename was successfully deleted"
+    else
+        echo "$filename does not exist"
+    fi
+
+> 'rm' -> Removes the file.
+
+## Deleting a folder/directory
+
+    echo "Enter the directory to be deleted: "
+    read dir
+
+    if [ -d $dir ]
+    then
+        rmdir $dir
+        echo "$dir was successfully deleted"
+    else
+        echo "$dir does not exist"
+    fi
+
+> 'rmdir' -> Removes the directory.

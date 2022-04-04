@@ -369,28 +369,141 @@ n2=30
 
 
 
-echo "Enter the directory to be deleted: "
-read dir
+# echo "Enter the directory to be deleted: "
+# read dir
 
-if [ -d $dir ]
-then 
-    rmdir $dir
-    echo "$dir was successfully deleted"
+# if [ -d $dir ]
+# then 
+#     rmdir $dir
+#     echo "$dir was successfully deleted"
+# else
+#     echo "$dir does not exist"
+# fi
+
+# select language in Python Java Javascript C++
+# do 
+#     case $language in
+#     Python)
+#         echo "You have selected Python";;
+#     Java)
+#         echo "You have selected Java";;
+#     Javascript)
+#         echo "You have selected Javascript";;
+#     C++)
+#         echo "You have selected C++";;
+#     *)
+#         echo "ERROR!! Please select a valid option between 1-4 included";;
+#     esac
+# done
+        
+    
+
+# echo "Press any key to terminal the script"
+
+# while [ true ]
+# do
+#     read -t 5 -n 1
+# if [ $? = 0 ]
+# then 
+#     echo "Terminated the script"
+#     exit;
+# else
+#     echo "Waiting for the user input"
+# fi
+# done
+
+
+# echo "Enter the filename: "
+# read filename
+
+# if [ -f $filename ]
+# then
+#     echo "Enter the text to be searched: "
+#     read text
+#     grep -i -n -c $text $filename
+
+# else
+#     echo "$filename does not exist"
+# fi
+
+
+# echo "Enter the filename: "
+# read filename
+
+# if [ -f $filename ]
+# then
+#     echo "Enter the text to be searched: "
+#     read text
+#     grep -i -v -c $text $filename
+
+# else
+#     echo "$filename does not exist"
+# fi
+
+
+# echo "Enter the filename: "
+# read file
+
+# if [ -f $file ]
+# then
+#     awk '{print}' $file
+
+# else
+#     echo "$file does not exist"
+# fi
+
+
+# echo "Enter the filename: "
+# read file
+
+# if [ -f $file ]
+# then
+#     echo "Enter the text to be searched: "
+#     read text
+#     awk ' /'$text'/ {print}' $file
+
+# else
+#     echo "$file does not exist"
+# fi
+
+
+
+# echo "Enter the filename: "
+# read file
+
+# if [ -f $file ]
+# then
+#     echo "Enter the text to be searched: "
+#     read text
+#     awk '{print $text}' $file
+
+# else
+#     echo "$file does not exist"
+# fi
+
+# echo "Enter the filename: "
+# read file
+
+# if [ -f $file ]
+# then
+#     echo "Enter the text to be searched: "
+#     read text
+#     awk '{print $text}' $file
+
+# else
+#     echo "$file does not exist"
+# fi
+
+
+echo "Enter the filename: "
+read file
+
+if [ -f $file ]
+then
+    awk '{print $5,$8}' $file
+
 else
-    echo "$dir does not exist"
+    echo "$file does not exist"
 fi
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

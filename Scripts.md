@@ -1,6 +1,9 @@
-Source Link -> https://www.youtube.com/watch?v=e7BufAVwDiM(1hr 54mins into the video )
+**Source Link -> https://www.youtube.com/watch?v=e7BufAVwDiM (Completed)**
+**Source Link -> https://www.youtube.com/watch?v=q2z-MRoNbgM**
 
 **"\*" or just asterisks in Bash means a wildcard that stands for any string of any size.**
+
+**'#! /bin/bash'** -> This is the first line of the script. It tells the computer what shell to use. In this case, Bash.
 
 **echo "hello world" > output.txt**
 
@@ -455,3 +458,160 @@ echo "${#car[@]}"
     fi
 
 > 'rmdir' -> Removes the directory.
+
+## Select loop with case statements
+
+    select language in Python Java Javascript C++
+    do
+        case $language in
+        Python)
+            echo "You have selected Python";;
+        Java)
+            echo "You have selected Java";;
+        Javascript)
+            echo "You have selected Javascript";;
+        C++)
+            echo "You have selected C++";;
+        *)
+            echo "ERROR!! Please select a valid option between 1-4 included";;
+        esac
+    done
+
+> case statements are like switch cases. 'esac' is the end of the case statement. ';;' is the end of the case statement. '\*' or asterisk means is the default case.
+
+## Waiting for user input
+
+    echo "Press any key to terminal the script"
+
+    while [ true ]
+    do
+        read -t 5 -n 1
+    if [ $? = 0 ]
+    then
+        echo "Terminated the script"
+        exit;
+    else
+        echo "Waiting for the user input"
+    fi
+
+# GREP Command
+
+> 'grep' -> Searches for a pattern in a file. To search some text within a file.
+
+## Searching text within a file using GREP command
+
+    echo "Enter the filename: "
+    read filename
+
+    if [ -f $filename ]
+    then
+        echo "Enter the text to be searched: "
+        read text
+        grep -i -n -c $text $filename
+
+    else
+        echo "$filename does not exist"
+    fi
+
+> '-i' -> Case insensitive search. '-n' -> Prints the line number. By default 'grep' is a case sensitive search.
+> '-c' -> Counts the number of occurrences of the pattern in the file.
+
+    echo "Enter the filename: "
+    read filename
+
+    if [ -f $filename ]
+    then
+        echo "Enter the text to be searched: "
+        read text
+        grep -i -v -c $text $filename
+
+    else
+        echo "$filename does not exist"
+    fi
+
+> '-v' -> Prints the lines that do not match the pattern. '-c' -> Counts the number of occurrences of the pattern not being in the file as we have used '-v' flag before it.
+
+# AWK scripting
+
+> AWK (awk) is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. Like sed and grep, it is a filter, and is a standard feature of most Unix-like operating systems.
+
+**Resource -> https://www.geeksforgeeks.org/awk-command-unixlinux-examples/**
+
+    echo "Enter the filename: "
+    read file
+
+    if [ -f $file ]
+    then
+        awk '{print}' $file
+
+    else
+        echo "$file does not exist"
+    fi
+
+> '{print}' -> Prints the content of the file.
+
+    echo "Enter the filename: "
+    read file
+
+    if [ -f $file ]
+    then
+        echo "Enter the text to be searched: "
+        read text
+        awk ' /'$text'/ {print}' $file
+
+    else
+        echo "$file does not exist"
+    fi
+
+<!-- ### Alternative
+
+    echo "Enter the filename: "
+    read file
+
+    if [ -f $file ]
+    then
+        echo "Enter the text to be searched: "
+        read text
+        awk '{print $text}' $file
+
+    else
+        echo "$file does not exist"
+    fi -->
+
+> '$text' -> Searches for the text in the file.
+
+    echo "Enter the filename: "
+    read file
+
+    if [ -f $file ]
+    then
+        awk '{print $5}' $file
+
+    else
+        echo "$file does not exist"
+    fi
+
+> '$5' -> Prints the 5th column/value in the file.
+
+    echo "Enter the filename: "
+    read file
+
+    if [ -f $file ]
+    then
+        awk '{print $5,$8}' $file
+
+    else
+        echo "$file does not exist"
+    fi
+
+> '$5' and '$8' -> Prints the 5th and the 8th column/value in the file.
+
+# Debugging Scripts
+
+> 'set +x' -> Stops printing the commands and their arguments as they are executed.
+
+**bash -x ./helloscript.sh** -> Command to debug a script.
+
+> 'set -x' -> Prints the commands and their arguments as they are executed. Shows step by step procedure of the script.
+
+**#! /bin/bash -x** -> If we put '-x' at the beginning of the script then it will print the commands and their arguments as they are executed as if we are debugging the script as the same time.

@@ -28,7 +28,7 @@ bash himom.sh(Name of the bash file we want to run/execute)
 
 > "+x" means to add the executable permission to that file(himom.sh).
 
-\*\*Remember this, when we are writing scripts or dealing with other's scripts. If the script doesn't execute with "./himom.sh"(./(file name of the script)) command, then it doesn't have the executable permission. We have to add the executable permission to the script by running **chmod +x himom.sh** command. Then we can execute the script with "./himom.sh" command.\*\*
+**Remember this, when we are writing scripts or dealing with other's scripts. If the script doesn't execute with "./himom.sh"(./(file name of the script)) command, then it doesn't have the executable permission. We have to add the executable permission to the script by running **chmod +x himom.sh** command. Then we can execute the script with "./himom.sh" command.**
 
 ## ZSH
 
@@ -85,3 +85,57 @@ bash himom.sh(Name of the bash file we want to run/execute)
 
 cat query.sql | grep "age" -> To filter out the results from the 1st command.
 !! -> To get the previous command.
+
+## sleep command
+
+**sleep 1** -> To pause the script for 1 second.
+
+## Variable
+
+name="John"
+
+echo "Good Morning $name"
+sleep 1
+echo "You're looking good today!! $name"
+sleep 1
+echo "Have a nice day $name"
+
+> 'name' is the variable here.
+
+## User Input
+
+echo "What is your name?"
+read name
+
+echo "Good Morning $name"
+sleep 1
+echo "You're looking good today!! $name"
+sleep 1
+echo "Have a nice day $name"
+
+> 'read' command is taking user input and storing it in the variable 'name'
+
+## Arguments
+
+### Positional Parameter/Argument
+
+name=$1
+
+echo "Good Morning $name"
+sleep 1
+echo "You're looking good today!! $name"
+sleep 1
+echo "Have a nice day $name"
+
+> '$1' is called a Position Parameter. It is the first argument that we pass to the script.
+
+name=$1
+time=$2
+
+echo "Good $2 $name"
+sleep 1
+echo "You're looking good today!! $name"
+sleep 1
+echo "Have a nice day $name"
+
+> '$2' is called a Position Parameter. It is the second argument that we pass to the script.

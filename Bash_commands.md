@@ -4,6 +4,18 @@ Reference Link -> https://www.youtube.com/watch?v=TPRSJbtfK4M
 
 > They are just command line commands. Instead of running them one by one. We write a script and it runs automatically.
 
+### .bashrc
+
+> It is a file that is executed every time you log in.
+
+**export twitter="Elon Musk"**
+
+> To make an environment variable permanent, you have to add it to .bashrc or .zsh file, so that they are available. Creating custom system variables is a good way to make your life easier.
+
+**echo $RANDOM**,**echo $SHELL**,**echo $USER**,**echo $RANDOM**,**echo $PWD**,**echo $HOSTNAME**,**echo $RANDOM**
+
+> Build in system variables in linux.
+
 ## Nano
 
 > This is a text editor in linux. Like Notepad for windows. It is not the only one but the easiest one.

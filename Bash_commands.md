@@ -151,3 +151,4 @@ sleep 1
 echo "Have a nice day $name"
 
 > '$2' is called a Position Parameter. It is the second argument that we pass to the script.
+
